@@ -1,0 +1,1 @@
+INSERT INTO `site_info`(`site_id`, `site_name`, `site_url`, `logo_url`, `delete_flg`, `contents_type`) VALUES (1,'test1','http://aaa','http://aaa/logo','0','1')
