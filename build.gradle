@@ -1,8 +1,20 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'mysql:mysql-connector-java:8.0.30'
+        classpath 'org.flywaydb:flyway-gradle-plugin:9.4.0'
+    }
+}
+
+
 plugins {
 	id 'org.springframework.boot' version '2.7.5-SNAPSHOT'
 	id 'io.spring.dependency-management' version '1.0.14.RELEASE'
 	id 'java'
 	id 'eclipse'
+	id "org.flywaydb.flyway" version "9.4.0"
 }
 
 group = 'com.happinesea'
@@ -19,13 +31,17 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-batch'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+	implementation 'org.hibernate.validator:hibernate-validator:6.0.17.Final'
+	
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'mysql:mysql-connector-java'
 	annotationProcessor 'org.projectlombok:lombok'
+	
+	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.batch:spring-batch-test'
-	implementation("com.h2database:h2")
-
+	testImplementation 'com.h2database:h2'
+    implementation 'org.flywaydb:flyway-core'
 }
 
 eclipse{
@@ -35,7 +51,8 @@ eclipse{
     }
     classpath {
         file {
-            whenMerged {
+            whenMerged { cp->
+                cp.entries.add( new org.gradle.plugins.ide.eclipse.model.SourceFolder('build/generated/src/main/java', null) )
                 def jre = entries.find { it.path.contains 'org.eclipse.jdt.launching.JRE_CONTAINER' }
                 jre.path = 'org.eclipse.jdt.launching.JRE_CONTAINER'
             }
@@ -55,4 +72,11 @@ tasks.eclipse.doFirst {
             eclipse.preferences.version=1
             '''.stripIndent())
     }
+}
+
+//https://flywaydb.org/documentation/
+flyway {
+    url = 'jdbc:h2:mem:;DB_CLOSE_ON_EXIT=TRUE;MODE=MySQL'
+    user = 'sa'
+    password = ''
 }
