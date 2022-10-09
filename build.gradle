@@ -75,7 +75,7 @@ tasks.eclipse.doFirst {
     }
 }
 
-// https://qiita.com/oono_yoshi/items/a0aa2fff171683006dbb
+// test report
 test.finalizedBy jacocoTestReport
 def coverageExcludeFiles = [
         // 内部クラスやLambda匿名クラスを排除
@@ -85,6 +85,8 @@ def coverageExcludeFiles = [
 jacocoTestReport {
     reports {
         html.enabled = true
+        xml.isEnabled = true
+        csv.isEnabled = false
     }
     afterEvaluate {
         classDirectories.from = files(classDirectories.files.collect {
