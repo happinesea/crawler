@@ -85,8 +85,8 @@ def coverageExcludeFiles = [
 jacocoTestReport {
     reports {
         html.enabled = true
-        xml.isEnabled = true
-        csv.isEnabled = false
+        xml.enabled = true
+        csv.enabled = false
     }
     afterEvaluate {
         classDirectories.from = files(classDirectories.files.collect {
