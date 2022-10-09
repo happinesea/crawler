@@ -15,6 +15,7 @@ plugins {
 	id 'java'
 	id 'eclipse'
 	id "org.flywaydb.flyway" version "9.4.0"
+	id 'jacoco'
 }
 
 group = 'com.happinesea'
@@ -71,6 +72,26 @@ tasks.eclipse.doFirst {
             connection.project.dir=
             eclipse.preferences.version=1
             '''.stripIndent())
+    }
+}
+
+// https://qiita.com/oono_yoshi/items/a0aa2fff171683006dbb
+test.finalizedBy jacocoTestReport
+def coverageExcludeFiles = [
+        // 内部クラスやLambda匿名クラスを排除
+        '**/*$*.class',
+        '**/*$lambda$*.class',
+]
+jacocoTestReport {
+    reports {
+        html.enabled = true
+    }
+    afterEvaluate {
+        classDirectories.from = files(classDirectories.files.collect {
+            fileTree(
+                    dir: it,
+                    exclude: coverageExcludeFiles)
+        })
     }
 }
 
