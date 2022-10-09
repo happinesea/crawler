@@ -3,6 +3,11 @@
 version: 2.1
 orbs:
   codecov: codecov/codecov@3.2.3
+workflows:
+  upload-to-codecov:
+    jobs:
+      - checkout
+      - codecov/upload
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
@@ -44,4 +49,3 @@ jobs:
 
       # run tests!
       - run: gradle test
-      - run: bash <(curl -s https://codecov.io/bash)
