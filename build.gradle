@@ -33,6 +33,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-batch'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	implementation 'org.hibernate.validator:hibernate-validator:6.0.17.Final'
+	implementation 'org.springframework.data:spring-data-bom:2020.0.0-M1'
+
 	
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'mysql:mysql-connector-java'
@@ -99,7 +101,7 @@ jacocoTestReport {
 
 //https://flywaydb.org/documentation/
 flyway {
-    url = 'jdbc:h2:mem:;DB_CLOSE_ON_EXIT=TRUE;MODE=MySQL'
+    url = 'jdbc:h2:mem:crawler;DB_CLOSE_ON_EXIT=TRUE;MODE=MySQL'
     user = 'sa'
     password = ''
 }
