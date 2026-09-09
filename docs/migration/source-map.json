@@ -1,0 +1,490 @@
+{
+  "ai/skills/ran-spring-batch-development/SKILL.md": {
+    "domain": "crawler",
+    "target": "ai/skills/ran-spring-batch-development/SKILL.md"
+  },
+  "ai/skills/ran-spring-batch-development/agents/openai.yaml": {
+    "domain": "crawler",
+    "target": "ai/skills/ran-spring-batch-development/agents/openai.yaml"
+  },
+  "docs/01_architecture.md": {
+    "domain": "crawler",
+    "target": "docs/01_architecture.md"
+  },
+  "docs/02_batch.md": {
+    "domain": "crawler",
+    "target": "docs/02_batch.md"
+  },
+  "docs/03_api.md": {
+    "domain": "crawler",
+    "target": "docs/03_api.md"
+  },
+  "docs/04_prompt.md": {
+    "domain": "crawler",
+    "target": "docs/04_prompt.md"
+  },
+  "docs/05_gap_analysis.md": {
+    "domain": "crawler",
+    "target": "docs/05_gap_analysis.md"
+  },
+  "docs/06_crawl_only_feasibility.md": {
+    "domain": "crawler",
+    "target": "docs/06_crawl_only_feasibility.md"
+  },
+  "docs/07_multithread_review.md": {
+    "domain": "crawler",
+    "target": "docs/07_multithread_review.md"
+  },
+  "docs/08_system_test_spec_ai_off_yahoo_to_cms.md": {
+    "domain": "crawler",
+    "target": "docs/08_system_test_spec_ai_off_yahoo_to_cms.md"
+  },
+  "docs/category-ingestion-latest.md": {
+    "domain": "crawler",
+    "target": "docs/category-ingestion-latest.md"
+  },
+  "docs/design/crawler-actions-frequency-and-limits.md": {
+    "domain": "crawler",
+    "target": "docs/design/crawler-actions-frequency-and-limits.md"
+  },
+  "docs/design/web-crawler-master-data-spec.md": {
+    "domain": "crawler",
+    "target": "docs/design/web-crawler-master-data-spec.md"
+  },
+  "docs/design/web-crawler-system-understanding.md": {
+    "domain": "crawler",
+    "target": "docs/design/web-crawler-system-understanding.md"
+  },
+  "docs/hourly-crawl-latest.md": {
+    "domain": "crawler",
+    "target": "docs/hourly-crawl-latest.md"
+  },
+  "docs/plans/2026-08-20-crawler-actions-frequency-and-limits.md": {
+    "domain": "crawler",
+    "target": "docs/plans/2026-08-20-crawler-actions-frequency-and-limits.md"
+  },
+  "docs/testing/crawler-actions-frequency-and-limits-test-spec.md": {
+    "domain": "crawler",
+    "target": "docs/testing/crawler-actions-frequency-and-limits-test-spec.md"
+  },
+  "docs/testing/web-crawler-test-spec.md": {
+    "domain": "crawler",
+    "target": "docs/testing/web-crawler-test-spec.md"
+  },
+  "tools/ci/run-web-crawler-tests.sh": {
+    "domain": "crawler",
+    "target": "tools/ci/run-web-crawler-tests.sh"
+  },
+  "tools/ci/tests/test-hourly-crawl-cleanup.ps1": {
+    "domain": "crawler",
+    "target": "tools/ci/tests/test-hourly-crawl-cleanup.ps1"
+  },
+  "web-crawler/.coveralls.yml": {
+    "domain": "crawler",
+    "target": ".coveralls.yml"
+  },
+  "web-crawler/.devcontainer/devcontainer.json": {
+    "domain": "crawler",
+    "target": ".devcontainer/devcontainer.json"
+  },
+  "web-crawler/.gitattributes": {
+    "domain": "crawler",
+    "target": ".gitattributes"
+  },
+  "web-crawler/.github/workflows/deploy.yml": {
+    "domain": "crawler",
+    "target": ".github/workflows/deploy.yml"
+  },
+  "web-crawler/.github/workflows/static.yml": {
+    "domain": "crawler",
+    "target": ".github/workflows/static.yml"
+  },
+  "web-crawler/.gitignore": {
+    "domain": "crawler",
+    "target": ".gitignore"
+  },
+  "web-crawler/AGENTS.md": {
+    "domain": "crawler",
+    "target": "AGENTS.md"
+  },
+  "web-crawler/CNAME": {
+    "domain": "crawler",
+    "target": "CNAME"
+  },
+  "web-crawler/README.md": {
+    "domain": "crawler",
+    "target": "README.md"
+  },
+  "web-crawler/build.gradle": {
+    "domain": "crawler",
+    "target": "build.gradle"
+  },
+  "web-crawler/docs/index.html": {
+    "domain": "crawler",
+    "target": "docs/index.html"
+  },
+  "web-crawler/docs/static/base/logo.png": {
+    "domain": "crawler",
+    "target": "docs/static/base/logo.png"
+  },
+  "web-crawler/docs/static/css/style.css": {
+    "domain": "crawler",
+    "target": "docs/static/css/style.css"
+  },
+  "web-crawler/docs/static/images/idea.png": {
+    "domain": "crawler",
+    "target": "docs/static/images/idea.png"
+  },
+  "web-crawler/docs/static/images/logo.png": {
+    "domain": "crawler",
+    "target": "docs/static/images/logo.png"
+  },
+  "web-crawler/docs/static/images/logo.xcf": {
+    "domain": "crawler",
+    "target": "docs/static/images/logo.xcf"
+  },
+  "web-crawler/docs/static/images/mainimg.jpg": {
+    "domain": "crawler",
+    "target": "docs/static/images/mainimg.jpg"
+  },
+  "web-crawler/docs/static/images/post.jpg": {
+    "domain": "crawler",
+    "target": "docs/static/images/post.jpg"
+  },
+  "web-crawler/docs/static/js/scroll.js": {
+    "domain": "crawler",
+    "target": "docs/static/js/scroll.js"
+  },
+  "web-crawler/gradle/wrapper/gradle-wrapper.jar": {
+    "domain": "crawler",
+    "target": "gradle/wrapper/gradle-wrapper.jar"
+  },
+  "web-crawler/gradle/wrapper/gradle-wrapper.properties": {
+    "domain": "crawler",
+    "target": "gradle/wrapper/gradle-wrapper.properties"
+  },
+  "web-crawler/gradlew": {
+    "domain": "crawler",
+    "target": "gradlew"
+  },
+  "web-crawler/gradlew.bat": {
+    "domain": "crawler",
+    "target": "gradlew.bat"
+  },
+  "web-crawler/settings.gradle": {
+    "domain": "crawler",
+    "target": "settings.gradle"
+  },
+  "web-crawler/src/integrationTest/java/com/happinesea/webcrawler/integration/MariaDbMigrationIntegrationTest.java": {
+    "domain": "crawler",
+    "target": "src/integrationTest/java/com/happinesea/webcrawler/integration/MariaDbMigrationIntegrationTest.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/Const.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/Const.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/ContentsParser.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/ContentsParser.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/NotFoundContentsException.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/NotFoundContentsException.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/PersistableEnum.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/PersistableEnum.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/RunFatalFailure.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/RunFatalFailure.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/WebCrawlerApplication.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/WebCrawlerApplication.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/config/BatchConfig.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/config/BatchConfig.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/config/CategoryAssignmentPlan.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/config/CategoryAssignmentPlan.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/config/CrawlerComponents.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/config/CrawlerComponents.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/config/WebCrawlerStartupValidator.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/config/WebCrawlerStartupValidator.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/entity/SiteCategory.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/entity/SiteCategory.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/entity/SiteContents.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/entity/SiteContents.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/entity/SiteInfo.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/entity/SiteInfo.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/entity/SiteInfoProcessPool.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/entity/SiteInfoProcessPool.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/entity/converter/ContentsTypeConverter.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/entity/converter/ContentsTypeConverter.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/entity/converter/DeleteFlgConverter.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/entity/converter/DeleteFlgConverter.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/entity/converter/EnumAttributeConverter.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/entity/converter/EnumAttributeConverter.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/entity/converter/ProcessStatusConverter.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/entity/converter/ProcessStatusConverter.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/repository/SiteCategoryRepository.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/repository/SiteCategoryRepository.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/repository/SiteContentsRepository.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/repository/SiteContentsRepository.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/repository/SiteInfoProcessRepository.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/repository/SiteInfoProcessRepository.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/repository/SiteInfoRepository.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/repository/SiteInfoRepository.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/service/AiAnalysisResult.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/service/AiAnalysisResult.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/service/AiAnalysisService.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/service/AiAnalysisService.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/service/ArticleImagePolicy.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/service/ArticleImagePolicy.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/service/CrawlJobSummary.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/service/CrawlJobSummary.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/service/OpenAiCompatibleAiClient.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/service/OpenAiCompatibleAiClient.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/service/ProcessOwnerFactory.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/service/ProcessOwnerFactory.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/service/ProcessPoolHeartbeatManager.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/service/ProcessPoolHeartbeatManager.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/service/SiteContentsInsertService.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/service/SiteContentsInsertService.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/service/SiteContentsService.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/service/SiteContentsService.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/service/UrlCanonicalizer.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/service/UrlCanonicalizer.java"
+  },
+  "web-crawler/src/main/java/com/happinesea/webcrawler/service/WordPressPostService.java": {
+    "domain": "crawler",
+    "target": "src/main/java/com/happinesea/webcrawler/service/WordPressPostService.java"
+  },
+  "web-crawler/src/main/resources/application-prod.yml": {
+    "domain": "crawler",
+    "target": "src/main/resources/application-prod.yml"
+  },
+  "web-crawler/src/main/resources/application-test.yml": {
+    "domain": "crawler",
+    "target": "src/main/resources/application-test.yml"
+  },
+  "web-crawler/src/main/resources/application.yml": {
+    "domain": "crawler",
+    "target": "src/main/resources/application.yml"
+  },
+  "web-crawler/src/main/resources/db/migration/V1__init_schema.sql": {
+    "domain": "crawler",
+    "target": "src/main/resources/db/migration/V1__init_schema.sql"
+  },
+  "web-crawler/src/main/resources/db/migration/V2__spring_batch_metadata.sql": {
+    "domain": "crawler",
+    "target": "src/main/resources/db/migration/V2__spring_batch_metadata.sql"
+  },
+  "web-crawler/src/main/resources/db/migration/V3__add_cms_category_id.sql": {
+    "domain": "crawler",
+    "target": "src/main/resources/db/migration/V3__add_cms_category_id.sql"
+  },
+  "web-crawler/src/main/resources/db/migration/V4__add_more_body_select_txt.sql": {
+    "domain": "crawler",
+    "target": "src/main/resources/db/migration/V4__add_more_body_select_txt.sql"
+  },
+  "web-crawler/src/main/resources/db/migration/V5__add_featured_image_url.sql": {
+    "domain": "crawler",
+    "target": "src/main/resources/db/migration/V5__add_featured_image_url.sql"
+  },
+  "web-crawler/src/main/resources/db/migration/V6__process_pool_auto_increment_and_owner.sql": {
+    "domain": "crawler",
+    "target": "src/main/resources/db/migration/V6__process_pool_auto_increment_and_owner.sql"
+  },
+  "web-crawler/src/main/resources/db/migration/V7__add_process_pool_lease_fencing.sql": {
+    "domain": "crawler",
+    "target": "src/main/resources/db/migration/V7__add_process_pool_lease_fencing.sql"
+  },
+  "web-crawler/src/main/resources/db/migration/V8__add_canonical_url_identity.sql": {
+    "domain": "crawler",
+    "target": "src/main/resources/db/migration/V8__add_canonical_url_identity.sql"
+  },
+  "web-crawler/src/main/resources/db/schema-mysql-compatible.sql": {
+    "domain": "crawler",
+    "target": "src/main/resources/db/schema-mysql-compatible.sql"
+  },
+  "web-crawler/src/main/resources/logback-spring.xml": {
+    "domain": "crawler",
+    "target": "src/main/resources/logback-spring.xml"
+  },
+  "web-crawler/src/main/resources/templates/contents_body.ftl": {
+    "domain": "crawler",
+    "target": "src/main/resources/templates/contents_body.ftl"
+  },
+  "web-crawler/src/main/resources/test-contents/test-article-yahoo.html": {
+    "domain": "crawler",
+    "target": "src/main/resources/test-contents/test-article-yahoo.html"
+  },
+  "web-crawler/src/main/resources/test-contents/test-article_more-yahoo.html": {
+    "domain": "crawler",
+    "target": "src/main/resources/test-contents/test-article_more-yahoo.html"
+  },
+  "web-crawler/src/main/resources/test-contents/test-category-yahoo.html": {
+    "domain": "crawler",
+    "target": "src/main/resources/test-contents/test-category-yahoo.html"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/ContentsParserTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/ContentsParserTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/CrawlerDbRegistrationLiveTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/CrawlerDbRegistrationLiveTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/WebCrawlerApplicationExitTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/WebCrawlerApplicationExitTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/WebCrawlerApplicationTests.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/WebCrawlerApplicationTests.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/config/BatchConfigTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/config/BatchConfigTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/config/CategoryAssignmentPlanTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/config/CategoryAssignmentPlanTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/config/CrawlerComponentsOwnershipTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/config/CrawlerComponentsOwnershipTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/config/CrawlerComponentsTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/config/CrawlerComponentsTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/config/ProductionConfigurationTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/config/ProductionConfigurationTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/config/WebCrawlerStartupValidatorTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/config/WebCrawlerStartupValidatorTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/entity/SiteInfoTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/entity/SiteInfoTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/entity/converter/EnumAttributeConverterTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/entity/converter/EnumAttributeConverterTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/repository/SiteCategoryRepositoryTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/repository/SiteCategoryRepositoryTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/repository/SiteContentsRepositoryTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/repository/SiteContentsRepositoryTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/repository/SiteInfoProcessRepositoryConcurrencyTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/repository/SiteInfoProcessRepositoryConcurrencyTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/repository/SiteInfoRepositoryTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/repository/SiteInfoRepositoryTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/service/AiAnalysisServiceTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/service/AiAnalysisServiceTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/service/CrawlJobSummaryLifecycleTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/service/CrawlJobSummaryLifecycleTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/service/CrawlJobSummaryPostAttemptBudgetTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/service/CrawlJobSummaryPostAttemptBudgetTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/service/CrawlJobSummaryTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/service/CrawlJobSummaryTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/service/OpenAiCompatibleAiClientTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/service/OpenAiCompatibleAiClientTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/service/ProcessOwnerFactoryTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/service/ProcessOwnerFactoryTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/service/SiteContentsServiceFatalFailureTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/service/SiteContentsServiceFatalFailureTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/service/SiteContentsServiceTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/service/SiteContentsServiceTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/service/UrlCanonicalizerTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/service/UrlCanonicalizerTest.java"
+  },
+  "web-crawler/src/test/java/com/happinesea/webcrawler/service/WordPressPostServiceTest.java": {
+    "domain": "crawler",
+    "target": "src/test/java/com/happinesea/webcrawler/service/WordPressPostServiceTest.java"
+  },
+  "web-crawler/src/test/resources/fixtures/yahoo-featured-image-article.html": {
+    "domain": "crawler",
+    "target": "src/test/resources/fixtures/yahoo-featured-image-article.html"
+  }
+}

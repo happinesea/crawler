@@ -1,0 +1,9 @@
+# Tasks
+
+Imported task status is a dated snapshot, not a new production verification. Continue domain work here after target PR merge.
+
+| ID | Task | Status | Current point | Next action | Workspace | Date | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| T-010 | crawler全カテゴリ固定割当・worker rotation | PR確認中 | 最新main `7aef67b`を基点に、全対象categoryのrun開始時snapshot、最後のworkerへ余りを集約する固定partition、1 worker内の複数category逐次処理、run-wide atomic `POST_LIMIT`、回収可能失敗継続とfatal伝播をTDD実装。独立レビュー後、Java 17で200 tests / 0 failures / 1 skip、bootJar、`git diff --check`をPASS。本番READ ONLY preflightはDB/公開WordPress RESTまでPASSし、production mutationは0 | Draft PR #61をレビューする。承認されたローカルWordPress認証情報を用意し、merge後の最新mainでauthenticated READ ONLY preflightから再開する。Gate 1（1 category・1/1）→Gate 2（1 worker・少数複数category）→安全確認後Gate 3（200/1000）を実施する。GitHub Actionsは8月quota中は使用せず、9月以降にscheduled runtimeを別途確認する | Codex：crawler category rotation / Agent A-E分業 | 2026-08-21 | base: `7aef67be65a90649f7f482a2f30139cbbddfe7fe`<br>branch: `codex/crawler-category-rotation`<br>implementation commit: `cd1713d7b770670d04cc6778d17166c5eca7cca5`<br>Draft PR: [#61](https://github.com/loveapple/ran/pull/61)<br>artifact SHA-256: `27c14aaf9a256216e10e064cc6dab588530d93623be8aca4f044d8dbe7cb08ac`<br>成果物: [Batch設計](https://github.com/happinesea/crawler/blob/main/docs/02_batch.md)、[構造理解](https://github.com/happinesea/crawler/blob/main/docs/design/web-crawler-system-understanding.md)、[機能・マスタ仕様](https://github.com/happinesea/crawler/blob/main/docs/design/web-crawler-master-data-spec.md)、[テスト仕様](https://github.com/happinesea/crawler/blob/main/docs/testing/web-crawler-test-spec.md)、[本番作業記録](https://github.com/happinesea/ran-deck/blob/main/docs/operations/web-crawler-production-release-2026-08-05.md) |
+
+Stage 2: migration PR review pending; production cutover is outside scope.

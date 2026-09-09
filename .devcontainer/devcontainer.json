@@ -1,0 +1,25 @@
+{
+    "name": "Java Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/java:17",
+    "features": {
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "17",
+            "installMaven": "false",
+            "installGradle": "true"
+        },
+        "ghcr.io/devcontainers/features/mysql:1": {
+            "mysqlVersion": "8.0"
+        }
+    },
+    "containerEnv": {
+        "DB_URL": "jdbc:mysql://localhost:3306/webcrawler",
+        "DB_USERNAME": "root",
+        "DB_PASSWORD": "password",
+        "CMS_HOST": "baidu.tokyo",
+        "POST_LIMIT": "10"
+    },
+    "postCreateCommand": "mysql -u root -ppassword -e 'CREATE DATABASE IF NOT EXISTS webcrawler;'",
+    "forwardPorts": [
+        3306
+    ]
+}

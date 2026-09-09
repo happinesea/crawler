@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ran Spring Batch Development"
+  short_description: "ranのクローラーとバッチを安全に実装・検証"
+  default_prompt: "Use $ran-spring-batch-development to implement or review the web-crawler change with its state, database, concurrency, and test contracts."
