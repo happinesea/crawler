@@ -1,0 +1,64 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: ${DB_MAX_POOL_SIZE:2}
+      minimum-idle: ${DB_MIN_IDLE:0}
+      idle-timeout: ${DB_IDLE_TIMEOUT_MS:60000}
+      max-lifetime: ${DB_MAX_LIFETIME_MS:240000}
+      keepalive-time: ${DB_KEEPALIVE_TIME_MS:30000}
+      connection-init-sql: SET SESSION wait_timeout=3600
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    open-in-view: false
+    properties:
+      jakarta.persistence.lock.timeout: 10000
+  flyway:
+    enabled: false
+  sql:
+    init:
+      mode: never
+
+web-crawler:
+  host-info: ${CMS_HOST}
+  post-contents-limit-count: ${POST_LIMIT:10}
+  post-featured-image-only: ${POST_FEATURED_IMAGE_ONLY:false}
+  crawl-process-limit-count: ${CRAWL_PROCESS_LIMIT:10}
+  crawl-content-limit-count: ${CRAWL_CONTENT_LIMIT:${POST_LIMIT:10}}
+  target-site-info-ids: ${TARGET_SITE_INFO_IDS:}
+  target-site-category-ids: ${TARGET_SITE_CATEGORY_IDS:}
+  skip-cms-post: ${SKIP_CMS_POST:true}
+  sync-existing-cms-content: ${SYNC_EXISTING_CMS_CONTENT:true}
+  processing-timeout-minutes: ${PROCESSING_TIMEOUT_MINUTES:60}
+  heartbeat-interval-ms: ${HEARTBEAT_INTERVAL_MS:60000}
+  repair-cms-content-id: ${REPAIR_CMS_CONTENT_ID:}
+  external-connect-timeout-ms: ${EXTERNAL_CONNECT_TIMEOUT_MS:10000}
+  external-connect-retry-count: ${EXTERNAL_CONNECT_RETRY_COUNT:3}
+  canonical:
+    allow-same-site: ${CANONICAL_ALLOW_SAME_SITE:false}
+    allowed-hosts: ${CANONICAL_ALLOWED_HOSTS:}
+  wordpress-source:
+    max-pages: ${WORDPRESS_SOURCE_MAX_PAGES:20}
+  ai:
+    mode: ${AI_MODE:"off"}
+    api-key: ${AI_API_KEY:}
+    base-url: ${AI_BASE_URL:}
+    model: ${AI_MODEL:}
+    timeout-ms: ${AI_TIMEOUT_MS:30000}
+    temperature: ${AI_TEMPERATURE:0.2}
+    max-output-tokens: ${AI_MAX_OUTPUT_TOKENS:2048}
+    max-input-chars: ${AI_MAX_INPUT_CHARS:12000}
+  wordpress:
+    base-url: ${WP_BASE_URL:${CMS_HOST}}
+    username: ${WP_USERNAME:}
+    application-password: ${WP_APPLICATION_PASSWORD:}
+    post-status: ${WP_POST_STATUS:publish}
+    max-image-upload-count: ${WP_MAX_IMAGE_UPLOAD_COUNT:3}

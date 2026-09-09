@@ -1,0 +1,51 @@
+spring:
+  output:
+    ansi:
+      enabled: never
+  messages:
+    encoding: UTF-8
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      jakarta.persistence.lock.timeout: 10000
+  flyway:
+    enabled: false
+
+web-crawler:
+  host-info: baidu.tokyo
+  post-contents-limit-count: 10
+  post-featured-image-only: false
+  crawl-process-limit-count: 10
+  crawl-content-limit-count: 10
+  skip-cms-post: true
+  processing-timeout-minutes: 60
+  heartbeat-interval-ms: 60000
+  external-connect-timeout-ms: 10000
+  external-connect-retry-count: 3
+  canonical:
+    allow-same-site: false
+    allowed-hosts:
+  wordpress-source:
+    max-pages: 20
+  ai:
+    mode: "off"
+    api-key:
+    base-url:
+    model:
+    timeout-ms: 30000
+    temperature: 0.2
+    max-output-tokens: 2048
+    max-input-chars: 12000
+  wordpress:
+    base-url: http://localhost
+    username: test-user
+    application-password: test-password
+    post-status: publish
+    max-image-upload-count: 3
