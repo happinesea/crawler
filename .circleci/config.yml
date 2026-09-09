@@ -1,0 +1,59 @@
+version: 2.1
+
+jobs:
+  application-tests:
+    docker:
+      - image: cimg/openjdk:17.0.20
+        environment:
+          MARIADB_INTEGRATION: "true"
+          MARIADB_URL: jdbc:mysql://localhost:3306/webcrawler_test
+          MARIADB_USERNAME: crawler
+          MARIADB_PASSWORD: crawler
+      - image: mariadb:10.11.18
+        environment:
+          MARIADB_DATABASE: webcrawler_test
+          MARIADB_USER: crawler
+          MARIADB_PASSWORD: crawler
+          MARIADB_ROOT_PASSWORD: root
+    steps:
+      - run:
+          name: Checkout repository over HTTPS
+          command: |
+            git init .
+            git remote add origin https://github.com/happinesea/crawler.git
+            git fetch --depth=1 origin "$CIRCLE_SHA1"
+            git checkout --detach "$CIRCLE_SHA1"
+      - run:
+          name: Verify Gradle Wrapper
+          command: |
+            test "$(sha256sum gradle/wrapper/gradle-wrapper.jar | awk '{print $1}')" = "2db75c40782f5e8ba1fc278a5574bab070adccb2d21ca5a6e5ed840888448046"
+      - restore_cache:
+          keys:
+            - gradle-v1-{{ checksum "gradle/wrapper/gradle-wrapper.properties" }}
+      - run:
+          name: Wait for MariaDB
+          command: dockerize -wait tcp://localhost:3306 -timeout 120s
+      - run:
+          name: Run application verification
+          command: bash tools/ci/run-web-crawler-tests.sh
+      - store_test_results:
+          path: build/test-results
+      - store_artifacts:
+          path: build/reports/tests
+          destination: test-reports
+      - store_artifacts:
+          path: build/reports/jacoco/test
+          destination: coverage
+      - store_artifacts:
+          path: build/libs
+          destination: boot-jar
+      - save_cache:
+          key: gradle-v1-{{ checksum "gradle/wrapper/gradle-wrapper.properties" }}
+          paths:
+            - ~/.gradle/caches
+            - ~/.gradle/wrapper
+
+workflows:
+  application-ci:
+    jobs:
+      - application-tests

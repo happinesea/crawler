@@ -3,7 +3,6 @@ plugins {
 	id 'eclipse'
 	id 'org.springframework.boot' version '3.5.3'
 	id 'io.spring.dependency-management' version '1.1.7'
-	id "com.github.kt3k.coveralls" version "2.12.2"
 	id 'jacoco'
 	id 'project-report'
 }
@@ -85,10 +84,8 @@ tasks.register('integrationTest', Test) {
 
 tasks.named('test') {
 	useJUnitPlatform()
+	finalizedBy jacocoTestReport
 }
-//test {
-//    finalizedBy jacocoTestReport // report is always generated after tests run
-//}
 jacocoTestReport {
     reports {
         html.required = true
