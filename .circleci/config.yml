@@ -16,7 +16,13 @@ jobs:
           MARIADB_PASSWORD: crawler
           MARIADB_ROOT_PASSWORD: root
     steps:
-      - checkout
+      - run:
+          name: Checkout repository over HTTPS
+          command: |
+            git init .
+            git remote add origin https://github.com/happinesea/crawler.git
+            git fetch --depth=1 origin "$CIRCLE_SHA1"
+            git checkout --detach "$CIRCLE_SHA1"
       - run:
           name: Verify Gradle Wrapper
           command: |
