@@ -2,8 +2,8 @@
 
 Historical. Not current source of truth for production; captured from ran 2ea27f1170c2351f6172b3f87db1b82718100000.
 
-[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/YCfPJGARVj7bQmffvDjAjK/SrPbgKgrfe5d1EkJcJU1L2/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/YCfPJGARVj7bQmffvDjAjK/SrPbgKgrfe5d1EkJcJU1L2/tree/main)
-[![Coverage Status](https://coveralls.io/repos/github/loveapple/web-crawler/badge.svg?branch=main)](https://coveralls.io/github/loveapple/web-crawler?branch=main)
+Legacy CircleCI and Coveralls badges were removed because they do not describe
+the canonical repository's current CI or coverage evidence.
 
 [![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/ThumbJava)](https://x.com/ThumbJava)
 

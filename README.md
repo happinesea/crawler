@@ -3,6 +3,7 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/happinesea/crawler/tree/main.svg?style=svg)](https://app.circleci.com/pipelines/github/happinesea/crawler)
 [![Java 17](https://img.shields.io/badge/Java-17-437291.svg)](https://adoptium.net/temurin/releases/?version=17)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-6f42c1.svg)](LICENSE)
+[![Coverage: JaCoCo artifact](https://img.shields.io/badge/Coverage-JaCoCo%20artifact-2f855a.svg)](https://app.circleci.com/pipelines/github/happinesea/crawler)
 
 Canonical crawler implementation for the RAN system. This repository owns the
 Java/Spring application, crawler business logic, application tests, and CI
@@ -36,16 +37,23 @@ CircleCI validates pull requests and `main` revisions. It does not schedule or
 dispatch production runs. An approved crawler revision is consumed by
 ran-deck's separately reviewed runtime and Production Backup contract.
 
+The existing GitHub Actions workflow temporarily repeats build/test validation.
+ran-deck T-013I tracks its retirement after the CircleCI path is accepted; this
+PR does not remove or alter the production workflow boundary.
+
 ## Security And Contribution
 
 - Do not commit database, WordPress, AI, SMTP, or other credentials.
 - Do not put production endpoints or runtime secret values in test output,
   README files, or build artifacts.
 - Use a pull request with the Java 17 test, disposable MariaDB integration,
-  bootJar, JaCoCo, wrapper-integrity, and secret-scan checks.
+  bootJar, JaCoCo, and wrapper-integrity checks. Verify added lines separately
+  for credentials before merge.
 - Report security issues privately through the repository's configured security
   contact rather than publishing credentials or exploit details.
 
 Apache License 2.0 applies to this repository's source. Third-party
 dependencies retain their own licenses; see their published metadata. No
-production operation is implied by a green application-CI build.
+production operation is implied by a green application-CI build. No
+project-authored attribution notice currently requires a root `NOTICE` file;
+add one before distribution if bundled code introduces that requirement.
