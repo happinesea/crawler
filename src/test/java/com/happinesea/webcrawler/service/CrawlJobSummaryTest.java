@@ -1,12 +1,12 @@
 package com.happinesea.webcrawler.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.BatchStatus;
+import org.springframework.batch.core.ExitStatus;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.boot.autoconfigure.batch.JobExecutionEvent;
 import org.springframework.boot.autoconfigure.batch.JobExecutionExitCodeGenerator;
@@ -41,10 +41,11 @@ class CrawlJobSummaryTest {
 	}
 
 	@Test
-	void failuresAreReflectedInJobExitStatusAndSummary() {
+	void skippedItemFailuresRemainACompletedJob() {
 		CrawlJobSummary summary = new CrawlJobSummary();
 		JobExecution jobExecution = new JobExecution(100L);
 		jobExecution.setStatus(BatchStatus.COMPLETED);
+		jobExecution.setExitStatus(ExitStatus.COMPLETED);
 
 		summary.beforeJob(jobExecution);
 		summary.setTargetCategoryCount(2);
@@ -54,13 +55,13 @@ class CrawlJobSummaryTest {
 		summary.incrementWordPressPostFailure();
 		summary.afterJob(jobExecution);
 
-		assertEquals(BatchStatus.FAILED, jobExecution.getStatus());
-		assertEquals("FAILED", jobExecution.getExitStatus().getExitCode());
+		assertEquals(BatchStatus.COMPLETED, jobExecution.getStatus());
+		assertEquals("COMPLETED", jobExecution.getExitStatus().getExitCode());
 		assertEquals(2, summary.snapshot().targetCategoryCount());
 		assertEquals(2, summary.totalFailures());
 
 		JobExecutionExitCodeGenerator exitCodeGenerator = new JobExecutionExitCodeGenerator();
 		exitCodeGenerator.onApplicationEvent(new JobExecutionEvent(jobExecution));
-		assertNotEquals(0, exitCodeGenerator.getExitCode());
+		assertEquals(0, exitCodeGenerator.getExitCode());
 	}
 }
