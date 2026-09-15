@@ -2,8 +2,6 @@ package com.happinesea.webcrawler.service;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.springframework.batch.core.BatchStatus;
-import org.springframework.batch.core.ExitStatus;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobExecutionListener;
 import org.springframework.stereotype.Component;
@@ -32,7 +30,6 @@ public class CrawlJobSummary implements JobExecutionListener {
 
 	@Override
 	public void afterJob(JobExecution jobExecution) {
-		int totalFailures = crawlFailureCount.get() + aiFailureCount.get() + wordpressPostFailureCount.get();
 		log.info("crawl_job_summary jobExecutionId={} targetCategoryCount={} crawlSuccessCount={} "
 						+ "crawlFailureCount={} newSavedCount={} duplicateSkippedCount={} aiSuccessCount={} "
 						+ "aiFallbackCount={} aiFailureCount={} wordpressPostSuccessCount={} "
@@ -41,11 +38,6 @@ public class CrawlJobSummary implements JobExecutionListener {
 				newSavedCount.get(), duplicateSkippedCount.get(), aiSuccessCount.get(), aiFallbackCount.get(),
 				aiFailureCount.get(), wordpressPostSuccessCount.get(), wordpressPostFailureCount.get(),
 				wordpressPostAttemptCount.get());
-		if (totalFailures > 0 && BatchStatus.COMPLETED.equals(jobExecution.getStatus())) {
-			jobExecution.setStatus(BatchStatus.FAILED);
-			jobExecution.setExitStatus(ExitStatus.FAILED.addExitDescription(
-					"Some categories or posts failed; see crawl_job_summary."));
-		}
 	}
 
 	public void reset() {
